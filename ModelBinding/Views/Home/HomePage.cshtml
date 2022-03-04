@@ -1,0 +1,43 @@
+﻿@using ModelBinding.Models
+@model ViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div> 
+        <h2>Home Page</h2>
+    </div>
+    <div>
+        <b>Ad:</b>@Model.Kisi.Ad <br />
+        <b>Soyad:</b>@Model.Kisi.Soyad <br />
+        <b>Yaş:</b>@Model.Kisi.Yas <br />
+        <hr />
+        <b>Adres:</b>@Model.Adres.AdresTanim<br />
+        <b>Şehir:</b>@Model.Adres.Sehir<br />
+        <b>Ad Soyad:</b>@(Model.Kisi.Ad + " "+Model.Kisi.Soyad)
+    </div>
+    <hr />
+    <div>
+        @using(Html.BeginForm())
+         {
+            <b>Ad&nbsp;</b>@Html.TextBoxFor(x=>x.Kisi.Ad)<br />
+            <b>Soyad&nbsp;</b>@Html.TextBoxFor(x=>x.Kisi.Soyad)<br />
+            <b>Yas&nbsp;</b>@Html.TextBoxFor(x=>x.Kisi.Yas)
+            <hr />
+            <b>Adres&nbsp;</b>@Html.TextBoxFor(x=>x.Adres.AdresTanim)<br />
+            <b>Şehir&nbsp;</b>@Html.TextBoxFor(x=>x.Adres.Sehir)<br />
+            <input type="submit" value="Gönder" />
+         }
+
+    </div>
+
+</body>
+</html>

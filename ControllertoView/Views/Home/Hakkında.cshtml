@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hakkında</title>
+</head>
+<body>
+    <div>
+        <h2> Hakkında </h2>
+        <hr />
+        @Html.DisplayText("isim")<br />
+        @Html.Hidden("isim")<br />
+        @Html.Value("isim")<br />
+        @Html.DropDownList("liste")<br />
+    </div>
+    <div>
+        <input type="text" value="@ViewBag.isim" />
+    </div>
+    <hr />
+    <div>
+        <b>Ad Soyad: </b> @Html.TextBox("isim")
+        <b>Bool değer:</b> @Html.CheckBox("kontrol")
+    </div>
+    <hr />
+    <div>
+        @Html.ActionLink("İletişim Sayfası", "iletisim")
+        @Html.ActionLink("Blog Sayfası", "blog")
+    </div>
+</body>
+</html>

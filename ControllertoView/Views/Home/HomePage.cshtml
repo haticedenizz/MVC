@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div>
+        <h2>Home Page</h2>
+        <hr />
+    </div>
+    @*<div>
+            <b>Ad Soyad: </b> @ViewData["text1"]
+            <b>Bool değer</b> @ViewData["check"]
+        </div>*@
+    <div>
+            <b>Ad Soyad: </b> @ViewBag.isim
+            <b>Bool değer:</b> @ViewBag.kontrol
+        </div>
+    @*<div>
+        <b>Ad Soyad: </b> @TempData["text2"]
+        <b>Bool değer:</b> @TempData["check"]
+    </div>*@
+
+</body>
+</html>

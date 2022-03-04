@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>iletisim</title>
+</head>
+<body>
+    <div> 
+        <h2> İletişim sayfası</h2>
+    </div>
+    <div>
+        <div>
+            <b>Ad Soyad: </b> @Html.TextBox("text2")
+            <b>Bool değer:</b> @Html.CheckBox("kontrol2")
+        </div>
+    </div>
+    <div>
+        @Html.ActionLink("Blog sayfası","blog")
+    </div>
+</body>
+</html>

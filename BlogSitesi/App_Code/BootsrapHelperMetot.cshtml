@@ -1,0 +1,30 @@
+﻿@helper Tag(string css, string text)
+{
+
+    <span class="label label-@css">@text</span> @:&nbsp;
+
+
+}
+
+@helper Buton(string text, string name = "btn1", string href = "#", string css = "primary")
+{
+
+    <a href="@href" name="@name" id="@name" class="btn btn-@css">@text</a>
+
+}
+@helper LinkListe(string name,string href, params string[] LinkText)
+{
+<ul id="name" name="name">
+    @for (int i = 0; i <LinkText.Length; i++)
+    {
+        <li>
+            <a href="#">@LinkText[i]</a>
+        </li>
+   
+    }
+
+</ul>
+
+
+}
+

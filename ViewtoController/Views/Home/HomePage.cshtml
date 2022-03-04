@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div>
+        @{ 
+            SelectListItem[] liste = new SelectListItem[]
+            {
+               new SelectListItem() {Text="Kadın",Value="K"},
+               new SelectListItem(){Text="Erkek",Value="E"}
+            };
+        }
+
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("text1")<br />
+            @Html.DropDownList("liste",liste)
+            @Html.CheckBox("check1")
+            @("Onaylıyorum") 
+            <hr />
+            <input type="submit" value="Gönder" />
+        }
+    </div>
+</body>
+</html>
